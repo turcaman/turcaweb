@@ -1,13 +1,11 @@
 ---
-const apkUrl = 'https://github.com/turcaman/turcanime/releases/download/v1.7.4-202604292043/turcanime-1.7.4.apk';
-import { Download } from '@lucide/astro';
+const apkUrl = 'https://github.com/turcaman/turcanime/releases/latest/download/turcanime-1.7.5.apk';
 ---
 
 <a 
 	href={apkUrl} 
-	class="inline-flex items-center justify-center gap-2 bg-purple-500 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg w-full sm:w-auto sm:min-w-[200px] shadow-lg hover:bg-purple-600 active:scale-[0.98] transition-all duration-150"
+	class="btn-primary-flat inline-flex items-center justify-center min-w-[140px]"
 	download
 >
-	<Download class="w-5 h-5" />
-	<span>Descargar</span>
+	DESCARGAR APK
 </a>
