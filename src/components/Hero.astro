@@ -2,26 +2,38 @@
 import DownloadButton from './DownloadButton.astro';
 ---
 
-<section class="min-h-[60vh] flex flex-col justify-center px-6 py-20 border-b border-border">
-	<div class="max-w-4xl w-full">
-		<div class="text-xs font-mono text-primary mb-4 tracking-widest">
-			v1.7.5 stable
+<section class="min-h-[60vh] px-6 py-20 border-b border-border">
+	<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-[inherit]">
+		<!-- Contenido de texto -->
+		<div>
+			<div class="text-xs font-mono text-primary mb-4 tracking-widest">
+				v1.7.6 stable
+			</div>
+			<h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-6 uppercase">
+				Turcanime
+			</h1>
+			<p class="text-lg text-text-secondary mt-8 mb-10 max-w-2xl leading-loose border-l-2 border-primary pl-6">
+				Mira anime en Android. <br>Sin anuncios, 100% privada, código abierto.
+			</p>
+			<div class="flex flex-wrap gap-3">
+				<DownloadButton />
+				<a
+					href="https://github.com/turcaman/turcanime"
+					target="_blank"
+					class="btn-flat"
+				>
+					GITHUB
+				</a>
+			</div>
 		</div>
-		<h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-6 uppercase">
-			Turcanime
-		</h1>
-		<p class="text-lg text-text-secondary mb-10 max-w-2xl leading-relaxed border-l-2 border-primary pl-6">
-			Cliente de streaming de anime para Android. Código abierto. Sin rastreadores.
-		</p>
-		<div class="flex flex-wrap gap-3">
-			<DownloadButton />
-			<a 
-				href="https://github.com/turcaman/turcanime" 
-				target="_blank"
-				class="btn-flat"
-			>
-				GITHUB
-			</a>
+
+		<!-- Mockup -->
+		<div class="flex justify-center md:justify-end">
+			<img
+				src="/screenshots/portrait.png"
+				alt="Turcanime App"
+				class="w-32 md:w-40 h-auto rotate-3 drop-shadow-2xl"
+			/>
 		</div>
 	</div>
 </section>
