@@ -1,38 +1,30 @@
 ---
+import { Image } from 'astro:assets';
+import portrait from '../../public/screenshots/portrait.avif';
 import DownloadButton from './DownloadButton.astro';
 ---
 
-<section class="min-h-[60vh] px-6 py-20 border-b border-border">
-	<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-[inherit]">
-		<!-- Contenido de texto -->
+<section class="px-5 py-12 md:py-24">
+	<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 		<div>
-			<div class="text-xs font-mono text-primary mb-4 tracking-widest">
-				v1.7.6 stable
-			</div>
-			<h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-6 uppercase">
-				Turcanime
+			<h1 class="text-5xl font-bold tracking-tighter mb-6">
+				Tus series favoritas, <br /><span class="text-primary">en formato nativo.</span>
 			</h1>
-			<p class="text-lg text-text-secondary mt-8 mb-10 max-w-2xl leading-loose border-l-2 border-primary pl-6">
-				Mira anime en Android. <br>Sin anuncios, 100% privada, código abierto.
+			<p class="text-text-secondary text-lg leading-relaxed mb-8">
+				Disfruta del mejor contenido de anime directamente en tu Android. Con un reproductor fluido y una interfaz diseñada para que tu única preocupación sea elegir el siguiente episodio.
 			</p>
-			<div class="flex flex-wrap gap-3">
+			<div class="flex gap-4">
 				<DownloadButton />
-				<a
-					href="https://github.com/turcaman/turcanime"
-					target="_blank"
-					class="btn-flat"
-				>
-					GITHUB
-				</a>
+				<a href="https://github.com/turcaman/turcanime" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
 			</div>
 		</div>
-
-		<!-- Mockup -->
 		<div class="flex justify-center md:justify-end">
-			<img
-				src="/screenshots/portrait.avif"
-				alt="Turcanime App"
-				class="w-32 md:w-40 h-auto rotate-3 drop-shadow-2xl"
+			<Image
+				src={portrait}
+				alt="Turcanime Home"
+				class="w-64 rotate-3 drop-shadow-2xl rounded-xl"
+				width={256}
+				format="avif"
 			/>
 		</div>
 	</div>
