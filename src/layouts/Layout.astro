@@ -12,11 +12,23 @@ const { title } = Astro.props;
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="canonical" href={Astro.url} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="preload" href="/screenshots/portrait.avif" as="image" />
+		
+		<meta name="description" content="Turcanime: aplicación de streaming de anime para Android. Privada, sin anuncios y de código abierto. Disfruta de tus series favoritas con fluidez." />
+		<meta name="keywords" content="Turcanime, anime, streaming, android, apk, código abierto, sin anuncios, privado" />
+		<meta name="robots" content="index, follow" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<meta name="description" content="Turcanime - Aplicación de streaming de anime para Android" />
+		
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="Turcanime: la experiencia definitiva para ver anime en Android." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:site_name" content="Turcanime" />
 	</head>
 	<body class="bg-black text-white font-sans antialiased">
 		<slot />
