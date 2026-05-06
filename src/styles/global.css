@@ -26,16 +26,13 @@
 }
 
 @layer components {
-  .btn-base {
-    @apply px-6 py-3 rounded-lg font-bold text-sm transition-all duration-150 will-change-transform outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
-  }
   .btn-primary {
-    @apply btn-base bg-primary text-white hover:opacity-90;
+    @apply px-6 py-3 rounded-lg font-bold text-sm bg-primary text-white transition-all duration-150 will-change-transform outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg hover:opacity-90;
   }
   .btn-secondary {
-    @apply btn-base border border-border hover:bg-surface;
+    @apply px-6 py-3 rounded-lg font-bold text-sm border border-border transition-all duration-150 will-change-transform outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg hover:bg-surface;
   }
   .card-elevated {
-    @apply p-[--spacing-xxl] border border-border rounded-[--radius-l] bg-[--color-surface-elevated] shadow-xl;
+    @apply p-[--spacing-xxl] border border-border rounded-[--radius-l] bg-[--color-surface-elevated] shadow-xl transition-transform duration-150 will-change-transform focus-within:ring-2 focus-within:ring-primary;
   }
 }
