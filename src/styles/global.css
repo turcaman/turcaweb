@@ -2,28 +2,40 @@
 
 @theme {
   --color-primary: #A855F7;
-  --color-bg-dark: #000000;
+  --color-bg: #000000;
   --color-surface: #0A0A0A;
+  --color-surface-elevated: #1A1A1A;
   --color-border: #1F1F1F;
-  --color-text-main: #FFFFFF;
+  --color-text-primary: #FFFFFF;
   --color-text-secondary: #AAAAAA;
-  --color-text-muted: #666666;
+
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xxl: 24px;
+  --spacing-xxxxl: 48px;
+
+  --radius-m: 8px;
+  --radius-l: 12px;
 }
 
 @layer base {
   body {
-    @apply bg-bg-dark text-text-main font-sans selection:bg-primary selection:text-white;
+    @apply bg-bg text-text-primary antialiased;
+    font-family: sans-serif;
   }
 }
 
 @layer components {
-  .btn-flat {
-    @apply px-6 py-2 border border-border bg-transparent hover:bg-surface transition-none active:bg-border font-medium text-sm;
+  .btn-base {
+    @apply px-6 py-3 rounded-lg font-bold text-sm transition-all duration-150 will-change-transform outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
   }
-  .btn-primary-flat {
-    @apply px-6 py-2 bg-primary text-black hover:opacity-90 transition-none active:scale-[0.98] font-bold text-sm;
+  .btn-primary {
+    @apply btn-base bg-primary text-white hover:opacity-90;
   }
-  .card-flat {
-    @apply p-6 border border-border bg-black;
+  .btn-secondary {
+    @apply btn-base border border-border hover:bg-surface;
+  }
+  .card-elevated {
+    @apply p-[--spacing-xxl] border border-border rounded-[--radius-l] bg-[--color-surface-elevated] shadow-xl;
   }
 }
