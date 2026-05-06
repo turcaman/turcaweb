@@ -32,7 +32,7 @@
   .btn-secondary {
     @apply px-6 py-3 rounded-lg font-bold text-sm border border-border transition-all duration-150 will-change-transform outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg hover:bg-surface;
   }
-  .card-elevated {
-    @apply p-[--spacing-xxl] border border-border rounded-[--radius-l] bg-[--color-surface-elevated] shadow-xl transition-transform duration-150 will-change-transform focus-within:ring-2 focus-within:ring-primary;
+  .card-plain {
+    @apply p-[--spacing-xxl] rounded-[--radius-l] bg-[--color-surface-elevated] transition-transform duration-150 will-change-transform;
   }
 }
