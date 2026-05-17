@@ -19,5 +19,11 @@ const { release, defaultOpen = false } = Astro.props;
                 <li class="leading-relaxed pl-5 relative before:content-['▸'] before:absolute before:left-0 before:text-primary" set:html={change} />
             ))}
         </ul>
+        {release.note && (
+            <div class="mt-5 p-4 rounded-lg border border-primary/20 bg-primary/5">
+                <p class="text-sm font-bold text-primary mb-2">ℹ️ Nota importante</p>
+                <p class="text-sm text-text-secondary leading-relaxed">{release.note}</p>
+            </div>
+        )}
     </div>
 </details>

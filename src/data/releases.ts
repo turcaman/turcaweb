@@ -2,6 +2,7 @@ export interface Release {
   version: string;
   title: string;
   changes: string[]; // HTML strings
+  note?: string;
 }
 
 export const releases: Release[] = [
@@ -9,7 +10,7 @@ export const releases: Release[] = [
     version: "v1.8.3",
     title: "Mantenimiento y Control",
     changes: [
-      "<strong>Limpieza total de caché:</strong> Nueva función en Ajustes para refrescar la conexión sin perder tu historial.",
+      "<strong>Limpieza total de caché:</strong> Nueva función en Ajustes que refresca la conexión sin perder tu historial.",
       "<strong>Interfaz mejorada:</strong> Diseño más limpio y coherente en los ajustes de la aplicación.",
       "<strong>Mayor estabilidad:</strong> Refactorización profunda de los servicios de red y del reproductor."
     ]
@@ -57,7 +58,8 @@ export const releases: Release[] = [
       "<strong>Nuevo menú de Ajustes:</strong> Ahora tienes el control para gestionar el espacio de la app directamente desde el menú.",
       "<strong>Reproducción más estable:</strong> Mejoras en el reproductor para reducir errores al cargar videos.",
       "<strong>Consistencia visual:</strong> Ajustes en el diseño para que todo se vea más uniforme y pulido."
-    ]
+    ],
+    note: "Si vienes de una versión anterior a la 1.7.5, te recomendamos desinstalar la aplicación antes de actualizar. Esto asegura que todos los ajustes y datos se configuren perfectamente desde el primer momento."
   },
   {
     version: "v1.7.4",
