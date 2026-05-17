@@ -4,34 +4,29 @@ import portrait from '../../public/screenshots/portrait.avif';
 import DownloadButton from './DownloadButton.astro';
 ---
 
-<section class="px-5 py-12 md:py-24">
-	<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-		<div>
-			<h1 class="text-5xl font-bold tracking-tighter mb-6">
-				Tus series favoritas, <br /><span class="text-primary">en formato nativo.</span>
-			</h1>
-			<p class="text-text-secondary text-lg leading-relaxed mb-8">
-				Disfruta del mejor contenido de anime directamente en tu Android. Con un reproductor fluido y una interfaz diseñada para que tu única preocupación sea elegir el siguiente episodio.
-			</p>
-			<div class="flex gap-4">
-				<DownloadButton />
-				<a href="https://github.com/turcaman/turcanime" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-			</div>
-		</div>
-		<div class="flex justify-center md:justify-end">
-			<Image
-				src={portrait}
-				alt="Turcanime Home"
-				class="w-64 rotate-3 drop-shadow-2xl rounded-xl"
-				width={256}
-				format="avif"
-			/>
-		</div>
-	</div>
+<section class="px-5 py-24 md:py-36 relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08)_0%,transparent_60%)] pointer-events-none" />
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative animate-fade-in">
+    <div>
+      <h1 class="text-5xl font-bold tracking-tighter mb-6">
+        Tus series favoritas, <br /><span class="text-primary">en formato nativo.</span>
+      </h1>
+      <p class="text-text-secondary text-lg leading-relaxed mb-8">
+        Disfruta del mejor anime en español latino directamente en tu Android. Un reproductor fluido y una interfaz diseñada para que tu única preocupación sea elegir el próximo episodio.
+      </p>
+      <div class="flex gap-4">
+        <DownloadButton />
+        <a href="https://github.com/turcaman/turcanime" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+    <div class="flex justify-center md:justify-end">
+      <Image
+        src={portrait}
+        alt="Turcanime Home"
+        class="w-64 rotate-3 drop-shadow-2xl rounded-xl"
+        width={256}
+        format="avif"
+      />
+    </div>
+  </div>
 </section>
-
-
-
-
-
-
