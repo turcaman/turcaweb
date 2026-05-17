@@ -15,7 +15,7 @@ import { releases } from '../data/releases';
 		</p>
 
 		<div class="space-y-4">
-			{releases.map((release) => <ChangelogEntry release={release} />)}
+			{releases.map((release, index) => <ChangelogEntry release={release} defaultOpen={index === 0} />)}
 		</div>
 
 		<div class="mt-8">
