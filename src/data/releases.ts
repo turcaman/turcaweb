@@ -7,6 +7,14 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v1.8.4",
+    title: "Estabilidad en reproducción",
+    changes: [
+      "<strong>Mejoras en el reproductor:</strong> Solucionamos un error que causaba que algunos episodios cargaran el video de otro capítulo.",
+      "<strong>Caché más inteligente:</strong> Optimizamos la forma en que guardamos los videos para asegurar que siempre veas exactamente el episodio que seleccionaste."
+    ]
+  },
+  {
     version: "v1.8.3",
     title: "Mantenimiento y Control",
     changes: [
