@@ -7,6 +7,14 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v1.8.5",
+    title: "Estabilidad de Caché",
+    changes: [
+      "<strong>Mejora en fiabilidad:</strong> Hemos optimizado el sistema de gestión de caché para asegurar que todos los episodios carguen siempre correctamente.",
+      "<strong>Estabilidad mejorada:</strong> Ajustes internos para garantizar una experiencia más sólida."
+    ]
+  },
+  {
     version: "v1.8.4",
     title: "Estabilidad en reproducción",
     changes: [
