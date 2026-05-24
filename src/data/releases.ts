@@ -10,7 +10,7 @@ export const releases: Release[] = [
     version: "v1.8.9",
     title: "Mejoras de Seguridad",
     changes: [
-      "<strong>Firma de producción:</strong> Configuración de firma oficial para corregir falsos negativos en Google Play Protect.",
+      "<strong>Firma de producción:</strong> Configuración de firma oficial para corregir falsos positivos en Google Play Protect.",
     ],
   },
   {
