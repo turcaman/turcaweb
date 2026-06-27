@@ -7,6 +7,14 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v1.9.3",
+    title: "Correcciones de reproducción",
+    changes: [
+      "<strong>Pantalla negra solucionada:</strong> Corregimos un error que dejaba la pantalla en negro al reanudar un episodio.",
+      "<strong>Estabilidad general:</strong> Ajustes internos para una experiencia más sólida.",
+    ],
+  },
+  {
     version: "v1.9.2",
     title: "Reanuda donde lo dejaste",
     changes: [
