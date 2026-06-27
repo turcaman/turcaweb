@@ -1,11 +1,16 @@
-<!doctype html>
-<html lang="es">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Turcanime</title>
-</head>
-<body style="margin:0; padding:2rem; font-family:system-ui, sans-serif; text-align:center; background:white; color:#333;">
-	<h1 style="font-weight:400;">Turcanime ya no está disponible.</h1>
-</body>
-</html>
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import WhyUs from '../components/WhyUs.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Turcanime">
+	<Header />
+	<Hero />
+	<Features />
+	<WhyUs />
+	<Footer />
+</Layout>

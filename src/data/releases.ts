@@ -7,6 +7,14 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v1.9.0",
+    title: "Reproducción más rápida y estable",
+    changes: [
+      "<strong>Streaming directo:</strong> Los episodios ahora cargan y se reproducen de forma directa, sin procesos intermedios. Más rápido y confiable que nunca.",
+      "<strong>Diseño refinado:</strong> Mejor contraste en las tarjetas, menos espacios innecesarios y una interfaz más limpia en general.",
+    ],
+  },
+  {
     version: "v1.8.9",
     title: "Mejoras de Seguridad",
     changes: [
