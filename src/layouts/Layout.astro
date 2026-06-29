@@ -16,24 +16,23 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="canonical" href={Astro.url} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link rel="preload" href="/screenshots/portrait.avif" as="image" />
-		
-		<meta name="description" content="Turcanime: aplicación de streaming de anime en español latino para Android. Privada, sin anuncios. Disfruta de tus series favoritas con fluidez." />
-		<meta name="keywords" content="Turcanime, anime, anime latino, streaming, android, apk, español, subtitulado, castellano, sin anuncios, privado" />
+
+		<meta name="description" content="Turcanime — Ver anime en Android sin límites. Streaming nativo, sin anuncios, sin cuentas. Ingeniería inversa y descifrado de streams." />
+		<meta name="keywords" content="Turcanime, anime, android, apk, streaming, ingeniería inversa, sin anuncios, privado" />
 		<meta name="robots" content="index, follow" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		
+
 		<meta property="og:title" content={title} />
-		<meta property="og:description" content="Turcanime: la experiencia definitiva para ver anime en español latino en Android." />
+		<meta property="og:description" content="Ver anime en Android sin límites. Sin anuncios, sin cuentas. Técnicamente posible." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:site_name" content="Turcanime" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content="Turcanime: la experiencia definitiva para ver anime en español latino en Android." />
+		<meta name="twitter:description" content="Ver anime en Android sin límites. Sin anuncios, sin cuentas. Técnicamente posible." />
 	</head>
-	<body class="bg-black text-white font-sans antialiased">
+	<body class="bg-bg text-text-primary font-sans antialiased scanlines">
 		<slot />
 	</body>
 </html>

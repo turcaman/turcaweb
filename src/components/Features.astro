@@ -1,52 +1,39 @@
 ---
-import { Bookmark, Languages, Search, Play, Shield, Info } from '@lucide/astro';
+import { Play, Search, Shield } from '@lucide/astro';
 
 const features = [
   {
-    icon: Bookmark,
-    title: 'Retoma al instante',
-    desc: 'Cierres la app donde la cierres, al volver todo sigue igual. El progreso de cada episodio se guarda automáticamente.',
-  },
-  {
-    icon: Languages,
-    title: 'Elige tu idioma',
-    desc: 'Subtitulado, Latino o Castellano. La app recuerda tu preferencia para que no tengas que elegirlo cada vez.',
+    icon: Play,
+    title: 'Streaming nativo',
+    desc: 'Reproducción directa desde la fuente. Sin capas intermedias, sin demoras. Prev/next, auto-ocultación y modo paisaje.',
   },
   {
     icon: Search,
     title: 'Búsqueda inteligente',
-    desc: 'Escribe y obtén sugerencias al instante. Resultados rápidos con historial y autocompletado.',
-  },
-  {
-    icon: Play,
-    title: 'Reproductor completo',
-    desc: 'Controles con auto-ocultación, avance y retroceso rápido, episodio anterior y siguiente, y modo pantalla completa.',
+    desc: 'Autocompletado, sugerencias en vivo e historial. Encontrá lo que buscas al instante.',
   },
   {
     icon: Shield,
-    title: 'Privacidad total',
-    desc: 'Sin cuentas, sin registro, sin anuncios. Todo se queda en tu dispositivo, nada se rastrea.',
-  },
-  {
-    icon: Info,
-    title: 'Detalles completos',
-    desc: 'Sinopsis, géneros, estado de emisión y lista de episodios organizada con selector de rango.',
+    title: 'Sin publicidad',
+    desc: 'Cero anuncios, cero rastreo, cero cuentas. La app no guarda nada tuyo fuera de tu dispositivo.',
   },
 ];
 ---
 
-<section class="px-5 pb-24">
+<section class="px-5 py-24 border-t border-border">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-2">Todo lo que necesitas para ver anime</h2>
-    <p class="text-text-secondary text-center text-sm mb-12">Una app hecha por fans, para fans.</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">No es una app más</h2>
+    <p class="text-text-secondary text-center text-sm mb-14 max-w-lg mx-auto">
+      Está hecha para los que saben lo que quieren y no toleran interrupciones.
+    </p>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="grid md:grid-cols-3 gap-5">
       {features.map(({ icon: Icon, title, desc }) => (
-        <div class="card-plain border border-border/0 hover:border-primary/20 hover:bg-surface-elevated/80 transition-all duration-200">
-          <div class="text-primary mb-4">
-            <Icon size={24} />
+        <div class="card-feature">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+            <Icon size={20} class="text-primary" />
           </div>
-          <h3 class="font-bold mb-2 text-white text-lg">{title}</h3>
+          <h3 class="font-bold text-lg mb-2 text-white">{title}</h3>
           <p class="text-text-secondary text-sm leading-relaxed">{desc}</p>
         </div>
       ))}
