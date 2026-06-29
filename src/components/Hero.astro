@@ -1,32 +1,23 @@
 ---
-import { Image } from 'astro:assets';
-import portrait from '../../public/screenshots/portrait.avif';
 import DownloadButton from './DownloadButton.astro';
 ---
 
-<section class="px-5 py-24 md:py-36 relative overflow-hidden">
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08)_0%,transparent_60%)] pointer-events-none" />
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative animate-fade-in">
-    <div>
-      <h1 class="text-5xl font-bold tracking-tighter mb-6">
-        El anime que amas, <br /><span class="text-primary">sin las interrupciones que odias.</span>
-      </h1>
-      <p class="text-text-secondary text-lg leading-relaxed mb-8">
-        La experiencia de streaming definitiva para Android. Sin anuncios, 100% privada y construida para ser rápida.
-      </p>
-      <div class="flex gap-4">
-        <DownloadButton />
-        <a href="https://github.com/turcaman/turcanime" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-    <div class="flex justify-center md:justify-end">
-      <Image
-        src={portrait}
-        alt="Turcanime Home"
-        class="w-64 rotate-3 drop-shadow-2xl rounded-xl"
-        width={256}
-        format="avif"
-      />
+<section class="relative overflow-hidden pt-28 pb-24 md:pt-36 md:pb-32 px-5">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.1)_0%,transparent_60%)] pointer-events-none" />
+  <div class="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+  <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl pointer-events-none" />
+
+  <div class="max-w-4xl mx-auto text-center relative animate-fade-in">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight mb-6">
+      El anime que amas, <br />
+      <span class="text-gradient-hero">sin las interrupciones que odias.</span>
+    </h1>
+    <p class="text-text-secondary text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+      Streaming directo, sin anuncios, 100% privado. Retoma donde lo dejaste, elige idioma y disfruta en Android.
+    </p>
+    <div class="flex gap-4 justify-center">
+      <DownloadButton />
+      <a href="https://github.com/turcaman/turcanime" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </div>
 </section>

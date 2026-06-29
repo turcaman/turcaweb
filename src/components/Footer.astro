@@ -1,8 +1,19 @@
 ---
+import DownloadButton from './DownloadButton.astro';
 ---
 
-<footer class="border-t border-border mt-16">
-  <div class="max-w-6xl mx-auto px-5 py-8 text-center text-sm text-text-secondary">
-    <p>&copy; 2026 Turcanime</p>
+<footer class="border-t border-border">
+  <div class="max-w-6xl mx-auto px-5 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-2 text-white font-bold tracking-tight text-base">
+      <svg viewBox="0 0 28 28" fill="none" class="w-5 h-5 text-primary">
+        <rect x="2" y="4" width="24" height="20" rx="4" stroke="currentColor" stroke-width="2" fill="none" />
+        <polygon points="11,10 19,14 11,18" fill="currentColor" />
+      </svg>
+      Turcanime
+    </div>
+    <div class="text-center md:text-right text-sm text-text-secondary space-y-1">
+      <p>Código abierto en <a href="https://github.com/turcaman/turcanime" class="text-primary hover:underline">GitHub</a></p>
+      <p>&copy; 2026 Turcanime</p>
+    </div>
   </div>
 </footer>
