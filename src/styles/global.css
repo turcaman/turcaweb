@@ -6,6 +6,7 @@
   --color-surface: #0A0A0A;
   --color-surface-elevated: #111111;
   --color-border: #262626;
+  --color-primary-btn: #7C3AED;
   --color-text-primary: #FFFFFF;
   --color-text-secondary: #BCBCBC;
 
@@ -26,7 +27,8 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 rounded-lg font-bold text-sm bg-primary text-white transition-all duration-150 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg cursor-pointer;
+    @apply px-6 py-3 rounded-lg font-bold text-sm text-white transition-all duration-150 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg cursor-pointer;
+    background-color: var(--color-primary-btn);
   }
   .card-feature {
     @apply p-6 rounded-xl bg-surface border border-border transition-all duration-200;
