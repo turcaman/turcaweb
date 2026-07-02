@@ -55,10 +55,10 @@
   }
 
   @keyframes particle-float {
-    0% { transform: translateY(0) translateX(0); opacity: 0; }
-    10% { opacity: 0.8; }
-    90% { opacity: 0.4; }
-    100% { transform: translateY(-120vh) translateX(30px); opacity: 0; }
+    0% { transform: translateY(0) translateX(0); opacity: 0; will-change: transform, opacity; }
+    10% { opacity: 0.8; will-change: transform, opacity; }
+    90% { opacity: 0.4; will-change: transform, opacity; }
+    100% { transform: translateY(-120vh) translateX(30px); opacity: 0; will-change: transform, opacity; }
   }
 
   .animate-glow-pulse {

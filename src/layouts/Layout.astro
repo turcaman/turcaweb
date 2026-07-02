@@ -6,31 +6,64 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'SoftwareApplication',
+			name: 'Turcanime',
+			operatingSystem: 'Android',
+			applicationCategory: 'Multimedia',
+			description:
+				'Descargá Turcanime APK y mirá anime en Android totalmente gratis. Streaming nativo HLS, sin publicidad, sin registro, sin límites.',
+			version: '1.10.1',
+			offers: {
+				'@type': 'Offer',
+				price: '0',
+				priceCurrency: 'USD',
+			},
+		},
+		{
+			'@type': 'WebSite',
+			name: 'Turcanime',
+			url: 'https://turcaweb.pages.dev',
+			description:
+				'App de anime para Android. Streaming nativo, sin anuncios, sin cuentas.',
+		},
+	],
+};
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" type="image/webp" href="/favicon.webp" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="canonical" href={Astro.url} />
-		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<meta name="description" content="Turcanime — Ver anime en Android sin límites. Streaming nativo, sin anuncios, sin cuentas. Ingeniería inversa y descifrado de streams." />
-		<meta name="keywords" content="Turcanime, anime, android, apk, streaming, ingeniería inversa, sin anuncios, privado" />
+		<meta name="description" content="Descargá Turcanime APK y mirá anime en Android totalmente gratis. Streaming nativo HLS, sin publicidad, sin registro, sin límites." />
+		<meta name="keywords" content="Turcanime, anime APK, ver anime en Android, streaming anime gratis, app anime sin anuncios, descargar anime Android" />
 		<meta name="robots" content="index, follow" />
+		<meta name="google-site-verification" content="-MioxejukaEkdMFiYdzrA-Xke6BbyQjjk0iYb2MegG4" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
 		<meta property="og:title" content={title} />
-		<meta property="og:description" content="Ver anime en Android sin límites. Sin anuncios, sin cuentas. Técnicamente posible." />
+		<meta property="og:description" content="Descargá Turcanime APK y mirá anime en Android totalmente gratis. Streaming nativo HLS, sin publicidad, sin registro, sin límites." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:site_name" content="Turcanime" />
+		<meta property="og:image" content="https://turcaweb.pages.dev/og-image.webp" />
+		<meta property="og:image:width" content="1024" />
+		<meta property="og:image:height" content="1024" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content="Ver anime en Android sin límites. Sin anuncios, sin cuentas. Técnicamente posible." />
+		<meta name="twitter:description" content="Descargá Turcanime APK y mirá anime en Android totalmente gratis. Streaming nativo HLS, sin publicidad, sin registro, sin límites." />
+		<meta name="twitter:image" content="https://turcaweb.pages.dev/og-image.webp" />
+
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 	</head>
 	<body class="bg-bg text-text-primary font-sans antialiased scanlines">
 		<slot />

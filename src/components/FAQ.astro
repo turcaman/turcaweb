@@ -1,0 +1,49 @@
+---
+const faq = [
+  {
+    q: '¿Es gratis?',
+    a: 'Sí, completamente gratis. Sin suscripciones, sin compras, sin publicidad.',
+  },
+  {
+    q: '¿Necesito root?',
+    a: 'No. Funciona en cualquier Android estándar, sin permisos especiales ni configuraciones raras.',
+  },
+  {
+    q: '¿Qué hago si no carga un video?',
+    a: 'Normalmente se resuelve solo. Si persiste, entrá a Ajustes > "Actualizar datos" y listo.',
+  },
+  {
+    q: '¿Es segura?',
+    a: 'No guarda ni envía ningún dato personal. Todo queda en tu dispositivo.',
+  },
+  {
+    q: '¿Se actualiza sola?',
+    a: 'No. Cuando haya una versión nueva, descargá el APK desde la página de la app.',
+  },
+  {
+    q: '¿Sirve en tablet o TV?',
+    a: 'Está pensada para teléfonos. En tablet funciona, pero la interfaz no está optimizada para pantallas grandes.',
+  },
+];
+---
+
+<section class="px-5 py-24 border-t border-border">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">Preguntas frecuentes</h2>
+    <p class="text-text-secondary text-center text-sm mb-14 max-w-lg mx-auto">
+      Todo lo que necesitás saber antes de descargar.
+    </p>
+
+    <div class="space-y-3">
+      {faq.map(({ q, a }) => (
+        <details class="card-feature group open:border-primary/30">
+          <summary class="font-bold text-white text-sm cursor-pointer list-none flex items-center justify-between">
+            {q}
+            <span class="text-primary transition-transform duration-200 group-open:rotate-45 text-lg leading-none">+</span>
+          </summary>
+          <p class="text-text-secondary text-sm leading-relaxed mt-4">{a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
